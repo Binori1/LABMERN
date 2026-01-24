@@ -1,3 +1,6 @@
+
+>Basic Git command
+
 1. `git status` - to check current status 
 2. `git init` - to initialized empty git repository
 3. `git add <file name>` - eg git add FundamentalOfGit.md - add file to staging
@@ -15,7 +18,7 @@
 14. `git remote -v` - View your current remotes
 15. `git remote remove origin` - remove the remote
 
-**create a new repository on the command line**
+>create a new repository on the command line
 ```
 echo "# LABMERN" >> README.md
 git init
