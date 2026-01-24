@@ -42,3 +42,10 @@ git branch -M main
 git push -u origin main
 ```
 
+>Difference between Git and github
+
+```
+Git is a version control software or system
+
+Github is the cloud repo.
+```
