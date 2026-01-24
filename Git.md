@@ -15,8 +15,8 @@
 14. `git remote -v` - View your current remotes
 15. `git remote remove origin` - remove the remote
 
-create a new repository on the command line 
-
+**create a new repository on the command line**
+```
 echo "# LABMERN" >> README.md
 git init
 git add README.md
@@ -25,10 +25,14 @@ git branch -M main
 git remote add origin https://github.com/Binori1/LABMERN.git
 git push -u origin main
 
-push an existing repository from the command line
+```
 
+
+>push an existing repository from the command line
+
+```
 git remote add origin https://github.com/Binori1/LABMERN.git
 git branch -M main
 git push -u origin main
-
+```
 
