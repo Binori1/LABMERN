@@ -1,0 +1,72 @@
+<!-- Student Registration Form -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My 31th Webpage</title>
+	<link rel="icon" href="logo.webp">		 
+	<style>
+	
+	</style>
+  </head>
+  <body>
+	<div id="main">
+	  <h1 align="center"><u>Registration Form</u></h1>
+	  <form id="frm" action="registration.html">
+		<p>
+		  <label for="fna">Fullname</label> <span>*</span>
+		  <bR>
+		  <input type="text" id="fna" name="fna" required>
+		</p>
+		<p>
+		  <label for="em">EmailId</label> <span>*</span> <br>
+		  <input type="email" id="em" name="em" required>  
+		</p>
+		<p>
+		  <label for="ph">Contact number</label> <span>*</span> <br>
+		  <input type="text" id="ph" name="ph" required maxlength="10">
+		</p>
+		<p>
+		  <label for="dob">Date of Birth</label> <br>
+		  <input type="date" id="dob" name="dob" min="1991-01-01" max="2024-09-06">
+		</p>
+		<p>
+		  <label for="gen">Gender:</label> <br>
+		  <input type="radio" id="g1" name="gen" value="f">
+		  <label>Female</label> &nbsp; 
+		  <input type="radio" id="g2" name="gen" value="m">
+		  <label>Male</label> &nbsp; 
+		  <input type="radio" id="g3" name="gen" value="o">
+		  <label>Others</label>		  
+		</p>
+		<p>
+		  <label for="course">Which Course?</label><br>
+		  <select id="course" name="course">
+			<option value="">Select Course</option>
+			<option value="c">C programme</option>
+			<option value="fsj">Full Stack Java</option>
+			<option value="fsp">Full Stack Python</option>
+			<option value="fsdn">Full Stack Dot.Net</option>
+			<option value="hcj">HTML-Javascript</option>  
+		  </select>	  
+		</p>
+		<p>
+		  <label for="mot">Mode of Training</label><br>
+		  <select id="mot" name="mot">
+			<option value="ct">Classroom Training</option>
+			<option value="ot">Online Training</option>
+			<option value="pmt">Placement Training</option>
+			<option value="pt">Project Training</option>
+			<option value="int">Internship</option>			
+		  </select>
+		</p>
+		<p align="center">
+		  <input type="checkbox" id="tc" name="tc" value="true" required>
+		  <label for="tc">I Accepted all Terms and Condtions</label>
+		</p>
+		<p align="center">
+		  <button type="submit" id="sb" name="sb">Register Now</button>
+		</p>		
+	  </form>	
+	</div>
+  </body> 
+</html>
