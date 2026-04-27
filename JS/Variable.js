@@ -1,4 +1,4 @@
-```
+
 
 // Old style
 var a = 10    
@@ -38,4 +38,3 @@ const arr =[10,20,30,40];
 arr[2] = 80; //allowed
 console.log(arr); // Output is : 10,20,80,40
 
-```
