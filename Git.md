@@ -49,3 +49,7 @@ Git is a version control software or system
 
 Github is the cloud repo.
 ```
+>To clone a repo to local system
+ ```
+ git clone url from github
+```
