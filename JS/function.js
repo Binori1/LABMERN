@@ -45,3 +45,4 @@ function calculateSum(minNumber,maxNumber){
 
 let res = calculateSum();
 console.log(calculateSum(1,20));
+
