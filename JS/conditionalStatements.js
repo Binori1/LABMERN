@@ -97,5 +97,3 @@ n = parseInt(n / 10);
 }
 console.log(n)
 
-// Given an integer n, print a solid square pattern of size n × n using "* " (a star followed by exactly one space).
-

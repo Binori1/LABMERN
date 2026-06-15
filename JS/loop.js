@@ -43,3 +43,16 @@ for(let i=5; i >=1; i--){
     console.log(symbol.repeat(i))
 }
 
+//
+//
+const symbol = "1 "
+for(let i=0; i <=1000; i++){
+
+    console.log(symbol.repeat(i))
+}
+
+for(let i=999; i >=1; i--){
+
+    console.log(symbol.repeat(i))
+}
+
