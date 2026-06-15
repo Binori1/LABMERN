@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intune Device Management</title>
+</head>
+<body>
+
+<h2>IT Admin Login</h2>
+<div id="loginSection">
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+</div>
+
+<hr>
+
+<div id="deviceSection" style="display:none;">
+    <h2>Delete Intune Device</h2>
+    <input type="text" id="deviceId" placeholder="Enter Device ID"><br><br>
+    <button onclick="deleteDevice()">Submit Delete Request</button>
+    <p id="resultMsg"></p>
+</div>
+
+<script>
+const API_URL = "http://localhost:3000";
+
+// Login
+async function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    });
+
+    if (response.ok) {
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("deviceSection").style.display = "block";
+    } else {
+        document.getElementById("loginMsg").innerText = "Login failed!";
+    }
+}
+
+// Delete device
+async function deleteDevice() {
+    const deviceId = document.getElementById("deviceId").value;
+
+    const response = await fetch(`${API_URL}/delete-device`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ deviceId })
+    });
+
+    const data = await response.json();
+    document.getElementById("resultMsg").innerText = data.message;
+}
+</script>
+
+</body>
+</html>
