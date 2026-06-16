@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Self Service Portal - Console</title>
+<link rel="stylesheet" href="./console.css" />
+
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">
+      <!--<div class="brand-icon"><i class="ti ti-devices"></i></div> -->
+      <span class="brand-name">Admin Self Service Portal</span>
+    </div>
+    <div class="user-pill">
+      <span>admin@company.com</span>
+      <div class="avatar">A</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Overview</h1>
+    <p class="page-subtitle">Fleet summary across all enrolled devices</p>
+
+    <div class="metrics">
+      <div class="metric-card">
+        <p class="metric-label">Total devices</p>
+        <p class="metric-value">1,284</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-label">Compliant</p>
+        <p class="metric-value">1,142</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-label">Non-compliant</p>
+        <p class="metric-value">98</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-label">Pending enrollment</p>
+        <p class="metric-value">44</p>
+      </div>
+    </div>
+
+    <h2>Platforms</h2>
+    <div class="blades">
+
+      <!-- Windows Blade -->
+      <div class="blade" onclick="window.location.href='windows.html'">
+        <div class="blade-header">
+          <div class="blade-icon icon-windows"><i class="ti ti-brand-windows"></i></div>
+          <div>
+            <p class="blade-title">Windows</p>
+            <p class="blade-sub">Desktops & laptops</p>
+          </div>
+        </div>
+        <div class="blade-stats">
+          <div class="stat-box">
+            <p class="stat-num">742</p>
+            <p class="stat-label">Devices</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num">689</p>
+            <p class="stat-label">Compliant</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num">53</p>
+            <p class="stat-label">Issues</p>
+          </div>
+        </div>
+        <p class="blade-issues">
+          <span class="badge badge-warning"><i class="ti ti-alert-triangle"></i> 12 updates pending</span>
+        </p>
+        <div class="blade-footer">
+          <span>View details</span>
+          <i class="ti ti-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- Android Blade -->
+      <div class="blade" onclick="window.location.href='android.html'">
+        <div class="blade-header">
+          <div class="blade-icon icon-android"><i class="ti ti-brand-android"></i></div>
+          <div>
+            <p class="blade-title">Android</p>
+            <p class="blade-sub">Phones & tablets</p>
+          </div>
+        </div>
+        <div class="blade-stats">
+          <div class="stat-box">
+            <p class="stat-num">542</p>
+            <p class="stat-label">Devices</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num">453</p>
+            <p class="stat-label">Compliant</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num">45</p>
+            <p class="stat-label">Issues</p>
+          </div>
+        </div>
+        <p class="blade-issues">
+          <span class="badge badge-danger"><i class="ti ti-alert-circle"></i> 8 unenrolled in last 24h</span>
+        </p>
+        <div class="blade-footer">
+          <span>View details</span>
+          <i class="ti ti-arrow-right"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
