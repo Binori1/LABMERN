@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Admin Self Service Portal- Sign In</title>
 <link rel="stylesheet" href="./login.css" />
+<script async ="https://alcdn.msauth.net/browser/2.35.0/js/msal-browser.min.js"></script>
+<script async src="./login.js">  </script>
 
 </head>
 <body>
@@ -15,16 +17,15 @@
 
     <form id="loginForm">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="s/w account@domain.com"  />
+      <input type="email" id="email" placeholder="s/w account@domain.com" required />
 
       <label for="password">Password</label>
-      <input type="password" id="password" placeholder="••••••••"  />
+      <input type="password" id="password" placeholder="••••••••" required />
 
       <button type="submit" class="btn-primary">Sign in</button>
     </form>
 
   </div>
-
-  <script src="./login.js">  </script>
+  
 </body>
 </html>
