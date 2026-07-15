@@ -1,0 +1,22 @@
+<html>
+<head>
+
+<title>Demo on key board event</title>
+</head>
+<body>
+<input id="key" type ="text" placeholder="Press your key">
+
+<p id="demo"></p>
+
+<script>
+let actionKey = document.querySelector("#key");
+let acationkeyParagraph = document.querySelector("#demo");
+actionKey.addEventListener("keydown", function(event){
+    acationkeyParagraph.innerHTML = "You pressed : " + event.key ;
+})
+
+</script>
+
+</body>
+
+</html>

@@ -29,7 +29,7 @@ const car = {
   brand: "Tesla",
   model: "Model 3",
   start: function() {
-    return `${this.brand} ${this.model} is starting...`; //this keyword refers to the object that is currently exceuting
+    return `${this.brand} ${car.model} is starting...`; //this keyword refers to the object that is currently exceuting
   }
 };
 

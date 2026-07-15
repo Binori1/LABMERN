@@ -66,7 +66,7 @@ rs = "Unknow"
     }
 console.log(rs)
 
-// if number is divisble by 3 print Fizz, print Bizz if divisible by 3, print FizzBizz if disvisble by both
+// if number is divisble by 3 print Fizz, print Bizz if divisible by 5, print FizzBizz if disvisble by both
 let n =5;
 if(n % 3 === 0 && n % 5 === 0){
 console.log("FizzBizz")

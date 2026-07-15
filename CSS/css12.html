@@ -1,0 +1,49 @@
+<!-- CSS Selectors  
+direct child selector 
+Syn:-	
+		ptag > ctag{
+			prop:val;
+			.....
+		}
+  
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS</title>
+	<meta charset="UTF-8">
+ 	<style>
+	  nav > a{
+	    color:red;
+		text-decoration:none;
+	  }
+	  ul > li > a{
+		color:teal;
+	  }
+	</style>
+  </head>
+  <body>
+	<h2>demo on direct child selector</h2>
+	<a href="ex1.html">goto ex1</a> <br>
+	<a href="ex2.html">goto ex2</a> <br>
+	<nav>
+		<a href="ex111.html">goto ex11</a> &nbsp; 
+		<a href="ex12.html">goto ex12</a>
+		<div>
+			<a href="ex13.html">goto ex13</a> <br>
+			<a href="ex14.html">goto ex14</a>
+		</div>
+	</nav>
+	
+	<ul>	
+	  <a href="https://www.google.com">google</a>
+	  <li>
+	    <a href="https://www.youtube.com">youtube</a>
+	  </li>
+	  <li>
+	      <a href="https://www.facebook.com">facebook</a>
+	  </li>
+	</ul>
+	 
+  </body>
+</html>

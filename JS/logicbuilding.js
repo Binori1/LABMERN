@@ -55,7 +55,7 @@ function findSum(n) {
     return n + findSum(n - 1);
 }
 //Driver code 
-let n = 5;
+let n = 3;
 console.log(findSum(n));
 
 

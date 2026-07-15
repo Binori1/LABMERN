@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async set time interval</title>
+</head>
+<body>
+    <div id="asyncdemo"> Current time </div>
+    <script>
+    setInterval(() => {
+    let wait = document.querySelector("#asyncdemo");
+    let d = new Date();
+    wait.innerHTML =    d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+
+    }, 5000);
+
+    </script>
+    
+</body>
+</html>

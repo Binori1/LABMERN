@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async call back</title>
+</head>
+<body>
+    <div id="asyncdemo"> Current time </div>
+    <script>
+    setTimeout(() => myfunction("Subasish"), 5000);
+    function myfunction(arg){
+        let loaddocument = document.querySelector("#asyncdemo")
+        loaddocument.innerHTML = "Hello " + arg
+    }
+
+    </script>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Callbacks</h1>
+<h2>Call a Function with a Callback</h2>
+<p id="demo"></p>
+
+<script>
+// A Greet Function
+function greet(name, callback) {
+  callback(name);
+}
+
+// A Display Function
+function display(message) {
+  document.getElementById("demo").innerHTML = "Hello " + message;
+}
+
+// Call greet() with a callback function (display)
+greet("John", display);
+</script>
+
+</body>
+</html>

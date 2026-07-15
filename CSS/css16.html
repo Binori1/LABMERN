@@ -1,0 +1,36 @@
+<!-- CSS Selectors -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS</title>
+	<meta charset="UTF-8">
+ 	<style>
+	 /* h1{ color:red; }     1
+	  .c{ color:hotpink; }	 3 	  
+	  #i{ color:blue; }      4
+	  div h1{ color:green; } 2	*/
+	  h1{
+	    background:#ff00cc;
+		color:#3300cc;
+	  }
+	  div h1{
+		display:inline-block;
+		text-align:center;
+	  }
+	  .c{
+		border-radius:10px;
+		padding:15px;
+	  }
+	  #i{
+		box-shadow:0 0 15px black;
+	  }
+	</style>
+  </head>
+  <body>
+	<h2>demo on CSS Precedence(priority)</h2>
+	<div>
+		<h1 id="i" class="c">Cascading Style Sheets</h1>
+	</div>
+	
+  </body>
+</html>

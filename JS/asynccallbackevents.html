@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async call back</title>
+</head>
+<body>
+    <p id="asyncdemo"> Result is : </p>
+    <script>
+    function addCal(a,b,callback){
+        let result = a + b;
+        callback(result);
+    }
+    function displayResult(addition){
+       let loaddocument = document.querySelector("#asyncdemo");
+       loaddocument.innerHTML = addition ;
+    }
+
+   addCal(5, 5, displayResult);
+    </script>
+    
+</body>
+</html>

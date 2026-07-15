@@ -1,0 +1,29 @@
+/* definging styles for flex box (flex.css) */ 
+#header{
+  background:#c5c5c5;
+  padding-left:10px;  
+}
+
+.flex-box{
+  display:flex;  /* row */
+  flex-direction:row; 
+			/*or row-reverse, column, column-reverse */
+  /* gap:100px; */
+  justify-content:space-evenly; /* space-around, space-between*/
+  flex-wrap:wrap;  /*nowrap */
+}
+
+.flex-box > div{
+  box-shadow:0 0 10px #000;
+  border-radius:10px;
+  transition:500ms;
+}
+.flex-box > div:hover{
+  box-shadow:0 0 20px #f00;
+  transform:scale(1.1); 	/* rotate(360deg); */
+}
+
+img{
+  width:200px;
+  height:180px;
+}

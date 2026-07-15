@@ -1,0 +1,9 @@
+/* example on defining external styles */
+h3{
+  color:green;
+}
+p{
+  color:blue;
+  text-align:justify;
+}
+/* save this file with a name "mystyles.css" in current location  */

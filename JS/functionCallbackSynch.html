@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Callbacks</h1>
+<h2>Synchronous Callbacks</h2>
+<p id="demo"></p>
+
+<script>
+// Calculate Function
+function calculate(x, y, operation) {
+  return operation(x, y);
+}
+// Add Fubction
+function add(a, b) {
+  return a + b;
+}
+// Call calculate() with add as callback
+let result = calculate(10, -10, add);
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>

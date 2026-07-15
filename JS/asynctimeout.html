@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout() async example</title>
+</head>
+<body>
+    <div id="asyncdemo"> Wait for 3 Secods </div>
+    <script>
+    setTimeout((arg) => {
+    let wait = document.querySelector("#asyncdemo");
+    wait.innerHTML = "I Love you !!!"
+
+    }, 3000);
+
+    </script>
+    
+</body>
+</html>
+
