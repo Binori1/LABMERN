@@ -1,0 +1,2 @@
+//initialize nodejs app 
+npm
