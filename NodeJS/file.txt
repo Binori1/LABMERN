@@ -1,0 +1,42 @@
+# Subkey of ESP registry
+
+* Device (Device subkey contains information about the last step in the device preparation phase and the Win32 apps deployment information in the device setup phase.)
+  
+* ESPTrackingInfo(ESPTrackingInfo subkey contains diagnostics information for all applications and policies that are tracked by ESP and the status of each app and policy during specific timestamps for the device setup and account setup phases.)
+  
+* The security identifier (SID) of the logged-in user. This subkey is created in the account setup phase. It won't be created if the device setup phase fails.
+
+_Significance of sub step in ESP_
+
+		EnrollmentStatusTracking/DevicePreparation/PolicyProviders/ProviderName/InstallationState ( Exit for device preparation ; Reports policy provider installation state back to ESP)
+		
+		EnrollmentStatusTracking/DevicePreparation/PolicyProviders/ProviderName/LastError
+		
+		EnrollmentStatusTracking/DevicePreparation/PolicyProviders/ProviderName/Timeout
+		
+		EnrollmentStatusTracking/DevicePreparation/PolicyProviders/ProviderName/TrackedResourceTypes
+		
+		EnrollmentStatusTracking/DevicePreparation/PolicyProviders/ProviderName/TrackedResourceTypes/Apps
+		
+		ESPTrackingInfo\Diagnostics\ExpectedMSIAppPackages (to track MSI app)
+		
+		ESPTrackingInfo\Diagnostics\ExpectedNetworkProfiles (to track wifi profile)
+		
+		ESPTrackingInfo\Diagnostics\ExpectedCertificateProfiles (to track SCEP)
+		
+		ESPTrackingInfo\Diagnostics\ExpectedPolicies (one dummy policy as esp does not track security policy)
+
+		ESPTrackingInfo\Diagnostics\ExpectedModernAppPackages (to track Microsoft store for business)
+
+__Locked value under the Apps subkey shows whether the device usage is blocked until this stage is completed__
+
+__TrackingPoliciesCreated value under the Apps\PolicyProviders\Sidecar subkey shows the status of tracking policies created for the device setup phase.__
+
+__InstallationState value under each Apps\Tracking\Sidecar\Win32App_{AppID} subkey shows the installation status of the Win32 app that's deployed in device context.__
+
+**_Available values for InstallationState are:_**
+
+1. (NotInstalled)
+1. (InProgress)
+1. (Completed)
+1. (Error) check IME logs for more details
