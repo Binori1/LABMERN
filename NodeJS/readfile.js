@@ -1,15 +1,15 @@
 
-const fs = require('fs');
+const fs = require('fs').promises;
 
-// Read file asynchronously
-fs.readFile('file.txt', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading file: ' + err);
-    return;
+async function readFileExample() {
+  try {
+    const data = await fs.readFile('E:\MERN\LABMERN\NodeJS\file.txt', 'utf8');
+    console.log('File content:', data);
+  } catch (err) {
+    console.error('Error reading file:', err.error);
   }
-  console.log('File content: ' + data);
-});
+}
 
-console.log('Reading file... (this runs first!)');
+readFileExample();
 
               

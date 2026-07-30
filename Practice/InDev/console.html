@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Management Portal</title>
+<link rel="stylesheet" href="./console.css" />
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Device Platform</h2>
+    <button onclick="showPlatform('Windows')">Windows</button>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <div class="header">
+        <h1>Device Management Portal</h1>
+        <span>Dispaly Autheticated User Name</span>
+    </div>
+
+    <div class="content">
+
+        <div class="platform-info">
+            <h2 id="platformTitle">Select a Platform</h2>
+            <p id="platformText">
+                Choose a platform from the left menu to manage devices.
+            </p>
+        </div>
+
+        <div class="action-grid">
+            <div class="action-card">
+                <div class="icon">📤</div>
+                <h3>Wipe Device</h3>
+                <p>Remove corporate management from a device.</p>
+                <button onclick="wipeDevice()">
+                    Enter Serial Number
+                </button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="./console.js"></script>
+
+</body>
+</html>
+
