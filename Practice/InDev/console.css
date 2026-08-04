@@ -13,8 +13,8 @@ body{
 
 /* Sidebar */
 .sidebar{
-    width:200px;
-    background:#1a1a2e;
+    width:220px;
+    background:#00A1DF;
     color:white;
     padding:20px;
 }
@@ -27,7 +27,7 @@ body{
 .sidebar button{
     width:100%;
     padding:12px;
-    margin-bottom:10px;
+    margin-bottom:px;
     border:none;
     border-radius:4px;
     background:#16213e;
@@ -49,9 +49,9 @@ body{
 
 /* Header */
 .header{
-    height:60px;
+    height:50px;
     background:white;
-    border-bottom:1px solid #ddd;
+    border-bottom:2px solid gray;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -92,7 +92,7 @@ body{
     background:white;
     border:1px solid #ddd;
     border-radius:8px;
-    padding:20px;
+    padding:10px;
     text-align:center;
     transition:0.3s;
 }
@@ -130,4 +130,46 @@ body{
 
 .action-card button:hover{
     background:#106ebe;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.modal-content{
+    background:white;
+    width:400px;
+    padding:20px;
+    border-radius:8px;
+    margin:10% auto;
+}
+
+.modal-content select{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.modal-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.modal-content input[type="file"]{
+    width:100%;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.modal-content h3{
+    margin-bottom:15px;
 }

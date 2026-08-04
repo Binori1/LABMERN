@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login</title>
-<link rel="stylesheet" href="./console.css" />
-</head>
-<body>
-<div class="login-container">
-    <h1>Admin Sign In</h1>
-    <button id="loginBtn">Sign in with Microsoft</button>
-</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Self Service Portal - Sign In</title>
+    <link rel="stylesheet" href="./login.css" />
+    
 
-<script src="https://alcdn.msauth.net/browser/2.32.0/js/msal-browser.min.js"></script>
-<script src="./login.js"></script>
+    <!-- MSAL Library -->
+    <script src="https://alcdn.msauth.net/browser/2.35.0/js/msal-browser.min.js"></script>
+
+    <!-- Custom Login Script -->
+    
+</head>
+
+<body>
+
+    <div class="main-card">
+
+        <div class="portal-display">
+            <span class="card-name">
+                Admin Self Service Portal
+            </span>
+        </div>
+
+        <div class="login-section">
+            <h2>Administrator Sign In</h2>
+
+            <p>
+                Sign in using your corporate Microsoft Entra ID account.
+            </p>
+
+            <button id="loginBtn" class="btn-primary">
+                Sign in with Microsoft
+            </button>
+        </div>
+
+    
+
+    </div>
+
+    <script src="./login.js"></script>
+
 </body>
 </html>

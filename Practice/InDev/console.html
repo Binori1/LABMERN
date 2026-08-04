@@ -9,48 +9,129 @@
 </head>
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-    <h2>Device Platform</h2>
-    <button onclick="showPlatform('Windows')">Windows</button>
-</div>
-
-<!-- Main Content -->
-<div class="main">
-
-    <div class="header">
-        <h1>Device Management Portal</h1>
-        <span>Dispaly Autheticated User Name</span>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Device Platform</h2>
+        <button onclick="showPlatform('Windows')">Windows</button>
     </div>
 
-    <div class="content">
+    <!-- Main Content -->
+    <div class="main">
 
-        <div class="platform-info">
-            <h2 id="platformTitle">Select a Platform</h2>
-            <p id="platformText">
-                Choose a platform from the left menu to manage devices.
-            </p>
+        <div class="header">
+            <h1>Device Management Portal</h1>
+            <span>Dispaly Autheticated User Name</span>
         </div>
 
-        <div class="action-grid">
-            <div class="action-card">
-                <div class="icon">📤</div>
-                <h3>Wipe Device</h3>
-                <p>Remove corporate management from a device.</p>
-                <button onclick="wipeDevice()">
-                    Enter Serial Number
-                </button>
+        <div class="content">
+
+            <div class="platform-info">
+                <h2 id="platformTitle">Select a Platform</h2>
+                <p id="platformText">
+                    Choose a platform from the left menu to manage devices.
+                </p>
             </div>
 
+            <!-- Container for Actions -->
+            <div class="action-grid">
+
+                <!-- Wipe Device -->
+                <div class="action-card">
+                    <div class="icon">🧹</div>
+                    <h3>Wipe Device</h3>
+                    <p>Remove corporate management from a device.</p>
+                    <button onclick="wipeDevice()">
+                        Enter Serial Number
+                    </button>
+                </div>
+
+                <!-- Delete Device -->
+                <div class="action-card">
+                    <div class="icon">🗑️</div>
+                    <h3>Delete Device</h3>
+                    <p>Delete a device from Intune.</p>
+                    <button onclick="deleteDevice()">
+                        Enter Serial Number
+                    </button>
+                </div>
+
+                <!-- Update Group Tag -->
+                <div class="action-card">
+                    <div class="icon">🏷️</div>
+                    <h3>Update Autopilot Group Tag</h3>
+                    <p>Update the Group Tag assigned to an Autopilot device.</p>
+                    <button onclick="updateGroupTag()">
+                        Enter Serial Number
+                    </button>
+                </div>
+
+                <!-- Register Device -->
+                <div class="action-card">
+                    <div class="icon">📥</div>
+                    <h3>Register Autopilot Device</h3>
+                    <p>
+                        Import and register devices into Windows Autopilot using a CSV file.
+                    </p>
+                    <button onclick="openRegisterModal()">
+                        Upload CSV
+                    </button>
+                </div>
+
+                <!-- Deregister Device -->
+                <div class="action-card">
+                    <div class="icon">❌</div>
+                    <h3>De-Register Autopilot Device</h3>
+                    <p>Remove a device from Windows Autopilot service.</p>
+                    <button onclick="deregisterAutopilotDevice()">
+                        Enter Serial Number
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Update -->
+            <div id="groupTagModal" class="modal">
+                <div class="modal-content">
+
+                    <h3>Update Autopilot Group Tag</h3>
+
+                    <p id="deviceInfo"></p>
+
+                    <select id="groupTagSelect">
+                        <option value="">Select Group Tag</option>
+                    </select>
+
+                    <div class="modal-buttons">
+                        <button onclick="confirmGroupTagUpdate()">
+                            Update
+                        </button>
+                        <button onclick="closeGroupTagModal()">
+                            Cancel
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+                <div id="registerModal" class="modal">
+                <div class="modal-content">
+                <h3>Register Autopilot Device</h3>
+                <p> Upload a CSV exported from Get-WindowsAutopilotInfo.ps1 </p>
+                <input type="file" id="autopilotCsv" accept=".csv" />
+                <div class="modal-buttons">
+                <button onclick="registerAutopilotCsv()"> Register </button>
+                 <button onclick="closeRegisterModal()"> Cancel </button>
+                </div>
+
+                </div>
+                </div>
+    
+                </div>
+            </div>
 
         </div>
-
     </div>
 
-</div>
-
 <script src="./console.js"></script>
-
 </body>
 </html>
 

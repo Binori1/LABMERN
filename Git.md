@@ -1,3 +1,12 @@
+
+>Changing dierctory in git bash
+>
+```
+cd /C/Users/u1176588/OneDrive\ -\ IQVIA/C-EUC/Intune/ - If any space escape it uisng \
+cd /C/Users/u1176588/
+
+```
+
 git 
 >Basic Git command
 
@@ -29,6 +38,7 @@ git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Binori1/LABMERN.git
+git remote add origin https://github.com/Binori1/Intune.git
 git push -u origin main
 
 ```
